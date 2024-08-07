@@ -1,80 +1,80 @@
 import 'package:flutter/material.dart';
 
-// class BottomCPaint extends CustomPainter {
-//   final Color color;
-//   BottomCPaint({required this.color});
-//   @override
-//   void paint(Canvas canvas, Size size) {
-//     // Layer 1
+class BottomCPaint extends CustomPainter {
+  final Color color;
+  BottomCPaint({required this.color});
+  @override
+  void paint(Canvas canvas, Size size) {
+    // Layer 1
 
-//     Paint paintFill0 = Paint()
-//       ..color = const Color.fromARGB(255, 255, 255, 255)
-//       ..style = PaintingStyle.fill
-//       ..strokeWidth = size.width * 0.00
-//       ..strokeCap = StrokeCap.butt
-//       ..strokeJoin = StrokeJoin.miter;
+    Paint paintFill0 = Paint()
+      ..color = const Color.fromARGB(255, 255, 255, 255)
+      ..style = PaintingStyle.fill
+      ..strokeWidth = size.width * 0.00
+      ..strokeCap = StrokeCap.butt
+      ..strokeJoin = StrokeJoin.miter;
 
-//     Path path_0 = Path();
-//     path_0.moveTo(0, size.height * 0.0602410);
-//     path_0.quadraticBezierTo(size.width * 0.0084068, size.height * -0.0015060,
-//         size.width * 0.0338983, 0);
-//     path_0.quadraticBezierTo(size.width * 0.2033898, size.height * 0.0413855,
-//         size.width * 0.2542373, size.height * 0.0481928);
-//     path_0.cubicTo(
-//         size.width * 0.3898305,
-//         size.height * 0.0481928,
-//         size.width * 0.6440678,
-//         size.height * 0.0481928,
-//         size.width * 0.7796610,
-//         size.height * 0.0481928);
-//     path_0.cubicTo(
-//         size.width * 0.8417966,
-//         size.height * 0.0386747,
-//         size.width * 0.9210508,
-//         size.height * -0.0043373,
-//         size.width * 0.9661017,
-//         0);
-//     path_0.quadraticBezierTo(size.width * 1.0009492, size.height * 0.0067470,
-//         size.width, size.height * 0.0602410);
-//     path_0.lineTo(size.width, size.height);
-//     path_0.lineTo(0, size.height);
-//     path_0.quadraticBezierTo(
-//         0, size.height * 0.7650602, 0, size.height * 0.0602410);
-//     path_0.close();
+    Path path_0 = Path();
+    path_0.moveTo(0, size.height * 0.0602410);
+    path_0.quadraticBezierTo(size.width * 0.0084068, size.height * -0.0015060,
+        size.width * 0.0338983, 0);
+    path_0.quadraticBezierTo(size.width * 0.2033898, size.height * 0.0413855,
+        size.width * 0.2542373, size.height * 0.0481928);
+    path_0.cubicTo(
+        size.width * 0.3898305,
+        size.height * 0.0481928,
+        size.width * 0.6440678,
+        size.height * 0.0481928,
+        size.width * 0.7796610,
+        size.height * 0.0481928);
+    path_0.cubicTo(
+        size.width * 0.8417966,
+        size.height * 0.0386747,
+        size.width * 0.9210508,
+        size.height * -0.0043373,
+        size.width * 0.9661017,
+        0);
+    path_0.quadraticBezierTo(size.width * 1.0009492, size.height * 0.0067470,
+        size.width, size.height * 0.0602410);
+    path_0.lineTo(size.width, size.height);
+    path_0.lineTo(0, size.height);
+    path_0.quadraticBezierTo(
+        0, size.height * 0.7650602, 0, size.height * 0.0602410);
+    path_0.close();
 
-//     canvas.drawPath(path_0, paintFill0);
+    canvas.drawPath(path_0, paintFill0);
 
-//     // Layer 1
+    // Layer 1
 
-//     Paint paintStroke0 = Paint()
-//       ..color = const Color.fromARGB(0, 33, 150, 243)
-//       ..style = PaintingStyle.stroke
-//       ..strokeWidth = size.width * 0.00
-//       ..strokeCap = StrokeCap.butt
-//       ..strokeJoin = StrokeJoin.miter;
+    Paint paintStroke0 = Paint()
+      ..color = const Color.fromARGB(0, 33, 150, 243)
+      ..style = PaintingStyle.stroke
+      ..strokeWidth = size.width * 0.00
+      ..strokeCap = StrokeCap.butt
+      ..strokeJoin = StrokeJoin.miter;
 
-//     canvas.drawPath(path_0, paintStroke0);
-//   }
-
-//   @override
-//   bool shouldRepaint(covariant CustomPainter oldDelegate) {
-//     return true;
-//   }
-// }
-
-class WavyEdgeContainer extends StatelessWidget {
-  final Widget child;
-
-  WavyEdgeContainer({required this.child});
+    canvas.drawPath(path_0, paintStroke0);
+  }
 
   @override
-  Widget build(BuildContext context) {
-    return ClipPath(
-      clipper: WavyEdgeClipper(),
-      child: child,
-    );
+  bool shouldRepaint(covariant CustomPainter oldDelegate) {
+    return true;
   }
 }
+
+// class WavyEdgeContainer extends StatelessWidget {
+//   final Widget child;
+
+//   WavyEdgeContainer({required this.child});
+
+//   @override
+//   Widget build(BuildContext context) {
+//     return ClipPath(
+//       clipper: WavyEdgeClipper(),
+//       child: child,
+//     );
+//   }
+// }
 
 // class WavyEdgeClipper extends CustomClipper<Path> {
 //   @override

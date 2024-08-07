@@ -35,6 +35,7 @@ class NewsProvider with ChangeNotifier {
     print('selectedCategories==' + selectedCategories.toString());
     if (selectedCategories.isNotEmpty) {
       return _news.where((news) {
+        print(news.category);
         return selectedCategories.contains(news.category.trim());
       }).toList();
     } else {
@@ -50,6 +51,7 @@ class NewsProvider with ChangeNotifier {
           return _news
               .where((news) =>
                   news.category.trim() == 'entertainment' ||
+                  news.category.trim() == 'general' ||
                   news.category.trim() == 'sports')
               .toList();
         case 'cool':
